@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Portfolio - Blog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(120deg, #1a1a2e, #16213e);
+            color: #eee;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #00adb5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #eee;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover {
+            color: #00adb5;
+        }
+
+        .nav-links a i {
+            font-size: 1.5rem;
+        }
+
+        .blog-section {
+            text-align: center;
+            padding: 6rem 1rem 3rem; /* Adjusted padding to fit content on one page */
+        }
+
+        .blog-section h1 {
+            font-size: 2.5rem;
+            color: #00adb5;
+        }
+
+        .blog-posts {
+            max-width: 800px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Square grid layout */
+            gap: 1.5rem;
+        }
+
+        .blog-post {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            aspect-ratio: 1 / 1; /* Proportional square */
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .blog-post h3 {
+            color: #00adb5;
+        }
+
+        .floating-3d {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 150px;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .unique-feature {
+            margin: 2rem auto;
+            text-align: center;
+            color: #00adb5;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00adb5, 0 0 20px #00adb5, 0 0 30px #00adb5;
+            }
+            to {
+                text-shadow: 0 0 20px #00ffc3, 0 0 40px #00ffc3, 0 0 60px #00ffc3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">FuturisticPortfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="portfolio.html"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="blog.html" class="active"><i class="fas fa-blog"></i></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog">
+        <section class="blog-section">
+            <h1>Blog</h1>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <h3>Mastering Glassmorphism in UI Design</h3>
+                    <p>A guide to implementing glassmorphism effects with CSS.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>3D Elements in Web Design</h3>
+                    <p>How to integrate 3D visuals into your projects.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Building for the Metaverse</h3>
+                    <p>Exploring the tools and frameworks for VR-enabled projects.</p>
+                </div>
+            </div>
+            <div class="unique-feature">
+                <p>Discover more in the future of design & technology!</p>
+            </div>
+        </section>
+        <img src="3Diconblog.png" alt="3D Animation" class="floating-3d">
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FuturisticPortfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Portfolio - Home</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d253f;
+            color: #f3f4f6;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #0d253f;
+            color: white;
+            padding: 1rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1abc9c;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem;
+            height: 100vh;
+            background: linear-gradient(to bottom, #0d253f, #1abc9c);
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            padding: 0.8rem 1.5rem;
+            background-color: white;
+            color: #1abc9c;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #16a085;
+            color: white;
+        }
+
+        .image-frame {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .image-frame img {
+            width: 90%;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            transform: rotateY(20deg) rotateX(10deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .image-frame img:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Kenfixit</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home">
+        <section class="hero">
+            <div>
+                <h1>Jambo! Interact with Kenfixit!</h1>
+                <p>Creating designs and interfaces that push the boundaries of innovation.</p>
+                <a href="portfolio.html" class="btn">Explore My Work</a>
+            </div>
+            <div class="image-frame">
+                <img src="picyangu.png" alt="Featured Project">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

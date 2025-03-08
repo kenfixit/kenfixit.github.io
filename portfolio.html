@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Portfolio - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(120deg, #1a1a2e, #16213e);
+            color: #eee;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .portfolio-section {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .portfolio-section h1 {
+            font-size: 2.5rem;
+            color: #00adb5;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .flash-section {
+            margin: 2rem auto;
+            max-width: 1200px;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .flash-section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        .floating-3d {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 150px;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">FuturisticPortfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portfolio">
+        <section class="portfolio-section">
+            <h1>My Work</h1>
+            <div class="grid-container">
+                <div class="grid-item glass-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Next-gen eCommerce platform with 3D visuals.</p>
+                </div>
+                <div class="grid-item glass-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Virtual reality-enabled product showcase.</p>
+                </div>
+                <div class="grid-item glass-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Portfolio website leveraging futuristic transitions.</p>
+                </div>
+            </div>
+            <div class="flash-section">
+                <img src="image2potfo.png" alt="Flash 2">
+            </div>
+        </section>
+        <img src="portfolio3D.png" alt="3D Animation" class="floating-3d">
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kenfixit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
